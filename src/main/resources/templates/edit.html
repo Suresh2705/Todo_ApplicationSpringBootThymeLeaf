@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>Edit</title>
+<style>
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+table{
+    width: 800px;
+}
+button{
+    font-size: large;
+    color: white;
+}
+.add{
+    background-color: #007BFF;
+}
+#delete{
+    background-color: #DC3545;
+}
+table th,table td,input{
+    font-size: large;
+}
+</style>
+</head>
+<body align="center">
+	<h2>Edit Todo</h2>
+	<form th:action="@{/edit}" th:object="${existTodo}" method="post">
+		<input type="hidden" name="id" th:value="${existTodo.id}" />
+		<input type="text" name="title" th:value=${existTodo.title} style='padding:5px' required />
+		<input type="text" name="description" th:value=${existTodo.description} style='padding:5px' />
+		<button class="add" type="submit" style='padding:5px'>Update</button>
+	</form>
+</body>
+</html>
