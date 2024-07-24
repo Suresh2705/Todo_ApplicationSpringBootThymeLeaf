@@ -46,14 +46,14 @@ This is a simple To-Do application that allows users to manage their tasks. It u
 1. **Clone the repository**:
 
     ```sh
-    git clone https://github.com/your-username/todo-application.git
+    git clone [https://github.com/your-username/todo-application.git](https://github.com/Suresh2705/Todo_ApplicationSpringBootThymeLeaf.git)
     cd todo-application
     ```
 
 2. **Create a MySQL database**:
 
     ```sql
-    CREATE DATABASE todo_db;
+    CREATE DATABASE TodoApp_db;
     ```
 
 3. **Update application.properties**:
@@ -61,11 +61,11 @@ This is a simple To-Do application that allows users to manage their tasks. It u
     Open `src/main/resources/application.properties` and update the database connection properties:
 
     ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/todo_db
-    spring.datasource.username=your_username
-    spring.datasource.password=your_password
+spring.datasource.url= jdbc:mysql://localhost:3306/TodoApp_db?createDatabaseIfNotExist=true
+spring.datasource.username= root
+spring.datasource.password= root
 
-    spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.ddl-auto=update
     ```
 
 4. **Build the project**:
@@ -91,8 +91,8 @@ This is a simple To-Do application that allows users to manage their tasks. It u
 The application uses MySQL as the database. Ensure that you have MySQL installed and running. Update the database connection properties in `application.properties` file:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/todo_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.url= jdbc:mysql://localhost:3306/TodoApp_db?createDatabaseIfNotExist=true
+spring.datasource.username= root
+spring.datasource.password= root
 
 spring.jpa.hibernate.ddl-auto=update
